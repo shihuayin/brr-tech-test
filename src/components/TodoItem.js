@@ -12,41 +12,37 @@ export default function TodoItem({
   return (
     <li className="flex items-center justify-between bg-white p-4 rounded-lg shadow">
       {isEditing ? (
-        {
-          /* edit mode  */
-        }(
-          <div className="flex-1 flex items-center gap-2">
-            <input
-              id={`edit-${item.id}`}
-              type="text"
-              value={editingTitle}
-              onChange={(e) => onEditChange(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") onSaveEdit(item.id);
-                if (e.key === "Escape") onCancelEdit();
-              }}
-              className="flex-1 border border-neutral-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-              aria-label={`Editing task ${item.title}`}
-            />
+        <div className="flex-1 flex items-center gap-2">
+          <input
+            id={`edit-${item.id}`}
+            type="text"
+            value={editingTitle}
+            onChange={(e) => onEditChange(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") onSaveEdit(item.id);
+              if (e.key === "Escape") onCancelEdit();
+            }}
+            className="flex-1 border border-neutral-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+            aria-label={`Editing task ${item.title}`}
+          />
 
-            {/* save logic */}
-            <button
-              onClick={() => onSaveEdit(item.id)}
-              className="btn-primary"
-              aria-label="Save task"
-            >
-              Save
-            </button>
+          {/* save logic */}
+          <button
+            onClick={() => onSaveEdit(item.id)}
+            className="btn-primary"
+            aria-label="Save task"
+          >
+            Save
+          </button>
 
-            {/* cancel logic */}
-            <button
-              onClick={onCancelEdit}
-              className="ml-2 focus:outline-none focus:ring-2 focus:ring-neutral-400"
-            >
-              Cancel
-            </button>
-          </div>
-        )
+          {/* cancel logic */}
+          <button
+            onClick={onCancelEdit}
+            className="ml-2 focus:outline-none focus:ring-2 focus:ring-neutral-400"
+          >
+            Cancel
+          </button>
+        </div>
       ) : (
         /* none edit mode  */
         <>
