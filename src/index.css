@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-primary {
+  @apply bg-accent text-white font-semibold rounded-lg px-5 py-2 transition-shadow duration-200;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.btn-primary:hover {
+  @apply bg-accent-dark;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.btn-accent {
+}
+
+body {
+  @apply bg-neutral-100 text-neutral-700 font-sans;
+}
+
+:focus {
+  outline: 2px solid var(--tw-ring-color, theme("colors.accent.DEFAULT"));
+  outline-offset: 2px;
+}

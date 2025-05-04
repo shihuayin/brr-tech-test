@@ -1,0 +1,293 @@
+[
+  {
+    "id": 1,
+    "name": "Spencer Adams",
+    "role": "Managing Director",
+    "email": "spencer.adams@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-24T09:12:00Z",
+    "driveUsage": "3.8 GB",
+    "device": "MacBook Pro"
+  },
+  {
+    "id": 2,
+    "name": "Eden Clarke",
+    "role": "Managing Director",
+    "email": "eden.clarke@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-22T11:05:00Z",
+    "driveUsage": "2.4 GB",
+    "device": "Lenovo ThinkPad"
+  },
+  {
+    "id": 3,
+    "name": "Riley Hughes",
+    "role": "Head of Client Accounts",
+    "email": "riley.hughes@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-21T15:47:00Z",
+    "driveUsage": "5.1 GB",
+    "device": "Dell XPS 15"
+  },
+  {
+    "id": 4,
+    "name": "Morgan Blake",
+    "role": "Head of Film",
+    "email": "morgan.blake@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-23T13:30:00Z",
+    "driveUsage": "4.6 GB",
+    "device": "MacBook Pro"
+  },
+  {
+    "id": 5,
+    "name": "Logan Perry",
+    "role": "Creative Producer",
+    "email": "logan.perry@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-25T08:20:00Z",
+    "driveUsage": "1.9 GB",
+    "device": "HP EliteBook"
+  },
+  {
+    "id": 6,
+    "name": "Finn Maxwell",
+    "role": "Executive Producer",
+    "email": "finn.maxwell@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-19T17:44:00Z",
+    "driveUsage": "6.2 GB",
+    "device": "MacBook Pro"
+  },
+  {
+    "id": 7,
+    "name": "Avery Reed",
+    "role": "Finance Manager",
+    "email": "avery.reed@brrmedia.co.uk",
+    "status": "inactive",
+    "lastLogin": "2024-03-30T10:03:00Z",
+    "driveUsage": "0.8 GB",
+    "device": "Lenovo ThinkPad"
+  },
+  {
+    "id": 8,
+    "name": "Quinn Sutton",
+    "role": "Account Manager",
+    "email": "quinn.sutton@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-17T12:18:00Z",
+    "driveUsage": "3.1 GB",
+    "device": "Dell XPS 13"
+  },
+  {
+    "id": 9,
+    "name": "Harper Lane",
+    "role": "Ei Account Manager",
+    "email": "harper.lane@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-20T09:55:00Z",
+    "driveUsage": "1.3 GB",
+    "device": "MacBook Pro"
+  },
+  {
+    "id": 10,
+    "name": "Casey Dalton",
+    "role": "Account Executive",
+    "email": "casey.dalton@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-24T14:07:00Z",
+    "driveUsage": "2.0 GB",
+    "device": "HP EliteBook"
+  },
+  {
+    "id": 11,
+    "name": "Jordan Price",
+    "role": "Account Executive",
+    "email": "jordan.price@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-18T16:22:00Z",
+    "driveUsage": "2.7 GB",
+    "device": "Lenovo ThinkPad"
+  },
+  {
+    "id": 12,
+    "name": "Rowan Ellis",
+    "role": "Account Executive",
+    "email": "rowan.ellis@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-23T08:11:00Z",
+    "driveUsage": "1.5 GB",
+    "device": "Dell XPS 15"
+  },
+  {
+    "id": 13,
+    "name": "Sidney Banks",
+    "role": "Head of Video and Digital",
+    "email": "sidney.banks@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-24T10:44:00Z",
+    "driveUsage": "7.9 GB",
+    "device": "MacBook Pro"
+  },
+  {
+    "id": 14,
+    "name": "Taylor Morgan",
+    "role": "Production Coordinator",
+    "email": "taylor.morgan@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-19T11:29:00Z",
+    "driveUsage": "2.2 GB",
+    "device": "HP EliteBook"
+  },
+  {
+    "id": 15,
+    "name": "Skyler Foster",
+    "role": "Senior Video Producer",
+    "email": "skyler.foster@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-22T15:40:00Z",
+    "driveUsage": "4.9 GB",
+    "device": "Lenovo ThinkPad"
+  },
+  {
+    "id": 16,
+    "name": "Cameron Steele",
+    "role": "Senior Video Producer",
+    "email": "cameron.steele@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-21T09:17:00Z",
+    "driveUsage": "4.4 GB",
+    "device": "MacBook Pro"
+  },
+  {
+    "id": 17,
+    "name": "Riley Garrison",
+    "role": "Senior Video Producer",
+    "email": "riley.garrison@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-17T13:52:00Z",
+    "driveUsage": "5.8 GB",
+    "device": "Dell XPS 15"
+  },
+  {
+    "id": 18,
+    "name": "Peyton Hale",
+    "role": "Director of Photography",
+    "email": "peyton.hale@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-23T12:36:00Z",
+    "driveUsage": "6.7 GB",
+    "device": "MacBook Pro"
+  },
+  {
+    "id": 19,
+    "name": "Ashton Cross",
+    "role": "Senior Video Editor",
+    "email": "ashton.cross@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-20T10:23:00Z",
+    "driveUsage": "3.4 GB",
+    "device": "Lenovo ThinkPad"
+  },
+  {
+    "id": 20,
+    "name": "Reese Vaughn",
+    "role": "Senior Video Editor",
+    "email": "reese.vaughn@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-18T14:09:00Z",
+    "driveUsage": "3.1 GB",
+    "device": "HP EliteBook"
+  },
+  {
+    "id": 21,
+    "name": "Charlie Monroe",
+    "role": "Video Producer",
+    "email": "charlie.monroe@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-24T09:55:00Z",
+    "driveUsage": "2.9 GB",
+    "device": "MacBook Pro"
+  },
+  {
+    "id": 22,
+    "name": "Devin Carson",
+    "role": "Video Producer",
+    "email": "devin.carson@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-22T16:14:00Z",
+    "driveUsage": "3.6 GB",
+    "device": "Lenovo ThinkPad"
+  },
+  {
+    "id": 23,
+    "name": "Jamie Rivers",
+    "role": "Video Producer",
+    "email": "jamie.rivers@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-21T11:30:00Z",
+    "driveUsage": "2.4 GB",
+    "device": "Dell XPS 13"
+  },
+  {
+    "id": 24,
+    "name": "Parker Lowell",
+    "role": "Video Producer",
+    "email": "parker.lowell@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-19T15:20:00Z",
+    "driveUsage": "3.0 GB",
+    "device": "HP EliteBook"
+  },
+  {
+    "id": 25,
+    "name": "Drew Patel",
+    "role": "Tech Lead",
+    "email": "drew.patel@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-25T08:02:00Z",
+    "driveUsage": "4.0 GB",
+    "device": "MacBook Pro"
+  },
+  {
+    "id": 26,
+    "name": "Robin Kumar",
+    "role": "Full Stack Developer",
+    "email": "robin.kumar@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-23T10:11:00Z",
+    "driveUsage": "1.6 GB",
+    "device": "Lenovo ThinkPad"
+  },
+  {
+    "id": 27,
+    "name": "Ellis Noor",
+    "role": "IT Administrator",
+    "email": "ellis.noor@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-24T13:41:00Z",
+    "driveUsage": "0.9 GB",
+    "device": "Dell XPS 13"
+  },
+  {
+    "id": 28,
+    "name": "Stevie Rossi",
+    "role": "Tech Consultant",
+    "email": "stevie.rossi@brrmedia.co.uk",
+    "status": "inactive",
+    "lastLogin": "2024-03-29T12:55:00Z",
+    "driveUsage": "0.7 GB",
+    "device": "HP EliteBookk"
+  },
+  {
+    "id": 29,
+    "name": "Admin",
+    "role": "IT Admin",
+    "email": "admin@brrmedia.co.uk",
+    "status": "active",
+    "lastLogin": "2024-04-25T10:00:00Z",
+    "driveUsage": "—",
+    "device": "Mac mini",
+    "isAdmin": true
+  }
+]
