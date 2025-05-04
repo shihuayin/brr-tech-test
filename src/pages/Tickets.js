@@ -26,6 +26,19 @@ export default function Tickets() {
       ? tickets
       : tickets.filter((t) => t.status === selectedStatus);
 
+  // sort
+  const sorted = filtered.slice().sort((a, b) => {
+    const sa = STATUS_ORDER.indexOf(a.status);
+    const sb = STATUS_ORDER.indexOf(b.status);
+    if (sa !== sb) return sa - sb;
+
+    const da =
+      a.createdDate instanceof Date ? a.createdDate : new Date(a.createdDate);
+    const db =
+      b.createdDate instanceof Date ? b.createdDate : new Date(b.createdDate);
+    return db - da;
+  });
+
   // calculate number of tickets for each status
   const summary = STATUS_ORDER.reduce(
     (acc, s) => ({
@@ -72,7 +85,7 @@ export default function Tickets() {
       </div>
 
       {/* ticktes list */}
-      {filtered.length === 0 ? (
+      {sorted.length === 0 ? (
         <p className="text-neutral-500">
           {selectedStatus === "All"
             ? "No tickets found."
@@ -83,7 +96,7 @@ export default function Tickets() {
           <h2 id="tickets-list" className="sr-only">
             Tickets List
           </h2>
-          {filtered.map((t) => (
+          {sorted.map((t) => (
             <TicketRow
               key={t.id}
               {...t}
