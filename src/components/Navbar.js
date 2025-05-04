@@ -37,7 +37,7 @@ export default function Navbar() {
         </div>
 
         {/*right part, email + logout button */}
-        <div className="hidden sm:flex items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 mt-4 sm:mt-0">
           <span className="text-sm text-neutral-500">{user.email}</span>
           <button
             onClick={() => {
@@ -45,7 +45,7 @@ export default function Navbar() {
               navigate("/", { replace: true });
             }}
             aria-label="Logout"
-            className="text-sm text-neutral-700 hover:text-primary transition"
+            className="px-4 py-2 rounded-lg border border-primary text-sm font-semibold text-primary hover:bg-primary hover:text-white transition"
           >
             Logout
           </button>
