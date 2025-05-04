@@ -1,8 +1,6 @@
-````markdown
 # BRR IT 仪表盘
 
-> **在线演示（建议直接试用）：**  
-> https://brr-tech-test.vercel.app/
+> **在线演示（建议直接试用）：** https://brr-tech-test.vercel.app/
 
 **仓库地址：** https://github.com/shihuayin/brr-tech-test.git
 
@@ -27,11 +25,11 @@
 ## 本地快速启动
 
 1. 克隆仓库
+
    ```bash
    git clone https://github.com/shihuayin/brr-tech-test.git
    cd brr-tech-test
    ```
-````
 
 2. 安装依赖
 
