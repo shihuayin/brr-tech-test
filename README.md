@@ -1,51 +1,51 @@
-# BRR IT 仪表盘
+# BRR IT Dashboard
 
-> **在线演示（建议直接试用）：** https://brr-tech-test.vercel.app/
+**Live Demo (recommended to try):** https://brr-tech-test.vercel.app/
 
-**仓库地址：** https://github.com/shihuayin/brr-tech-test.git
-
----
-
-## 概览
-
-本项目是一个 React + Firebase 的内部员工仪表盘。包含员工目录、IT 请求、工单跟踪和待办列表等功能。
-
-- **数据库 Firebase**  
-  为了模拟真实项目中的多端协作场景，所有数据（员工列表、工单、待办）都保存在 Firebase Firestore（实时数据库）中。这样可以跨设备、跨用户同步数据。
-- **示例数据已预先导入**  
-  我已通过 `scripts/import.js` 将示例数据导入到 Firestore，因此没有在仓库中上传 `serviceAccountKey.json`。
-- **登录模拟**
-  - Welcome 页面通过 `sessionStorage` 存储当前用户，点击 “Login as User”/“Login as Admin” 后刷新也会保留该状态。
-- **Firebase 配置**  
-  为方便评审，`firebase.js` 中的客户端初始化配置直接提交至仓库，无需额外环境变量。
-  > ⚠️ 说明，生产环境需要将 `firebase.js` 中的敏感字段提取到 `.env` 并在 `.gitignore` 中忽略。
+**Repository：** https://github.com/shihuayin/brr-tech-test.git
 
 ---
 
-## 本地快速启动
+## Overview
 
-1. 克隆仓库
+This project is an internal staff dashboard built with React + Firebase. It includes a staff directory, IT request form, ticket tracking, and to-do list.
+
+- **Database: Firebase**  
+  To simulate a real multi-device collaboration scenario, all data (staff list, tickets, todos) are stored in Firebase Firestore (real-time database). This enables cross-device, cross-user synchronization.
+- **Sample Data Pre-imported**  
+  I have used scripts/import.js to import sample data into Firestore, so serviceAccountKey.json is not included in this repo.
+- **Login Simulation**
+  On the Welcome page, the current user is stored in sessionStorage. Clicking “Login as User” / “Login as Admin” will persist after refresh.
+- **Firebase Configuration**  
+  For review convenience, the client initialization config in `src/firebase.js` is committed. No extra environment variables are needed.
+  > ⚠️ In production, extract sensitive fields from `src/firebase.js` into a .env file and add it to .gitignore.
+
+---
+
+## Quick Start Locally
+
+1. Clone the repo
 
    ```bash
    git clone https://github.com/shihuayin/brr-tech-test.git
    cd brr-tech-test
    ```
 
-2. 安装依赖
+2. Install dependencies
 
    ```bash
    npm install
    ```
 
-3. 启动开发服务器
+3. Start the development server
 
    ```bash
    npm start
    ```
 
-   访问 [http://localhost:3000](http://localhost:3000)，点击 “Login as User” / “Login as Admin” 进入仪表盘。
+   Visit [http://localhost:3000](http://localhost:3000)，then click “Login as User” / “Login as Admin” to enter the dashboard.
 
-4. 运行单元测试
+4. Run unit tests
 
    ```bash
    npm test
@@ -53,82 +53,78 @@
 
 ---
 
-## 已完成的基础功能
+## Completed Core Features
 
-- **首页仪表盘**
+- **Dashboard Home**
 
-  - 欢迎语
-  - **Unresolved Tickets** 卡片：
+  - Welcome message
+  - **Unresolved Tickets** card:
 
-    - 管理员：统计并显示所有用户的“未解决”工单总数（包括 **Open** 和 **In Progress** 状态）
-    - 普通用户：统计并显示自己提交的“未解决”工单总数（包括 **Open** 和 **In Progress** 状态）
+    - Admin: count and display all users' unresolved tickets (including **Open** and **In Progress**)
+    - Regular user: count and display their own unresolved tickets (including **Open** and **In Progress**)
 
-  - **My Pending Tasks** 卡片：显示当前用户未完成的待办事项数量
+  - **My Pending Tasks** card: display the number of incomplete to-do items for the current user
 
-  - **Latest Updates** 列表：
+  - **Latest Updates** list:
 
-    - 从可见工单中取 **最新 3 条**
-    - 按“创建时间”降序排序（最新在前）
-    - 管理员可见“提交人”信息（用户名 + 邮件链接）
+    - Take the 3 most recent visible tickets
+    - Sort by creation time descending (newest first)
+    - Admin can see submitter info (username + email)
 
-- **员工目录**
+- **Staff Directory**
 
-  - 普通用户：查看每位员工的姓名、职位、邮箱和在线状态（active/inactive）
-  - 管理员：额外可见“最后登录时间”、“Google Drive 存储用量”、“当前设备类型”
+  - Regular user: view each staff member’s name, role, email, and status (active/inactive)
+  - Admin: additionally see “Last Login”, “Google Drive Usage”, and “Current Device”
 
-- **IT 请求**
+- **IT Request**
 
-  - 从下拉列表选择问题类型
-  - 填写描述并模拟文件上传
-    - 选中文件后显示 `Uploading...`，2 秒后变为 `Uploaded: 文件名`
-  - “Submit Request” 按钮在填写完整后可提交
+  - Select issue type from dropdown
+  - Fill description and simulate file upload
+    - After selecting a file, displays `Uploading...`, and after 2 seconds shows `Uploaded: filename`
+  - “Submit Request” button becomes enabled when the form is complete
 
-- **工单列表（Tickets）**
+- **Ticket List**
 
-  - **普通用户**：只展示当前用户自己提交的工单
-  - **管理员**：展示所有用户提交的工单
-  - 可按状态筛选（All / Open / In Progress / Resolved）
-  - 排序逻辑：
+  - **Regular user**: only shows tickets submitted by the current user
+  - **Admin**: shows all submitted tickets
+  - Filter by status（All / Open / In Progress / Resolved）
+  - Sorting logic：
 
-    1. 按状态优先级分组：`Open` → `In Progress` → `Resolved`
-    2. 同一状态组内再按创建时间降序展示，最新的永远排在最前
+    1. Group by status priority：`Open` → `In Progress` → `Resolved`
+    2. Within each status group, sort by creation time descending (newest first)
 
-- **待办事项**
+- **To-Do List**
 
-  - 添加、编辑、删除任务
-  - 勾选复选框标记完成／未完成，并自动将已完成项置后
+  - Add, edit, and delete tasks
+  - Check the checkbox to mark complete/incomplete, and automatically move completed items to the bottom
 
 ---
 
-## 已完成的加分项
+## Completed Bonus Features
 
-- **管理员视图**
-  员工目录展示最后登录、Drive 用量、设备
-- **路由导航**
-  页面切换基于 React Router
-- **样式方案**
-  使用 Tailwind CSS
-- **可复用组件**
+- **Admin View**
+  Staff directory shows last login, Drive usage, device
+- **Routing Navigation**
+  Page switching based on React Router
+- **Styling**
+  Uses Tailwind CSS
+- **Reusable Components**
   `Card`、`FormField`、`StaffCard`、`TicketRow`、`TodoItem`
-- **单元测试**
-  针对 `Card`、`StaffCard`、`TicketRow`、`ITRequest` 进行了测试
+- **Unit Tests**
+  Tests for `Card`、`StaffCard`、`TicketRow`、`ITRequest`
 
 ---
 
-## 尚未完成的加分项
+## Unfinished Bonus Items
 
 - **TypeScript**
-  当前全部使用 JavaScript
+  Currently all JavaScript
 
 ---
 
-## 未来改进
+## Future Improvements
 
-- **真实用户认证**：接入 Firebase Auth，持久化登录状态
-- **环境变量管理**：将 `src/firebase.js` 配置提取到 `.env` 并保护密钥
-- **文件真实上传**：集成 Firebase Storage，支持实际文件存储与下载
-- **列表分页/搜索**：员工、工单列表增加分页或关键词搜索功能
-
-```
-
-```
+- **Real Authentication**：integrate Firebase Auth to persist login state
+- **Env Variable Management**：extract `src/firebase.js` config into `.env` and secure keys
+- **Real File Upload**：integrate Firebase Storage to support actual file upload/download
+- **Pagination/Search**：add pagination or keyword search for staff and tickets lists
