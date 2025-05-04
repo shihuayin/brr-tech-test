@@ -58,9 +58,9 @@ export default function Dashboard() {
 
       {/* two cards */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2">
-        {/* 1. open tickets */}
+        {/* 1. unresolved tickets */}
         <Card
-          title="Open Tickets"
+          title="Unresolved Tickets"
           actions={
             <Link to="/tickets" className="text-primary hover:underline">
               View all →
