@@ -9,7 +9,7 @@ module.exports = {
           dark: "#0F172A",
         },
         accent: {
-          light: "#F6AD55", // 可以用来做浅色状态
+          light: "#F6AD55",
           DEFAULT: "#DD6B20",
           dark: "#C05621",
         },
