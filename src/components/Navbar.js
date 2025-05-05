@@ -9,8 +9,8 @@ export default function Navbar() {
 
   // navigation link styling
   const linkClass = ({ isActive }) =>
-    `text-neutral-700 hover:text-primary transition focus:outline-none   ${
-      isActive ? "text-primary font-semibold" : ""
+    `px-3 py-2 rounded-lg font-bold   text-neutral-700 hover:text-primary hover:bg-primary/10 active:font-extrabold transition focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50   ${
+      isActive ? "bg-primary/20 text-primary font-semibold" : ""
     }`;
 
   return (
